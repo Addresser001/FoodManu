@@ -1,19 +1,22 @@
 import { useState } from "react"
 
 const NavBar = ({data, setItems}) => {
-    const [isActive, setActive] = useState(false)
-
+    const [isActive, setActive] = useState(false);
+    const[foodTitle, setFoodTitle]=useState('All')
+    
     const filterAll=()=>{
     
         setItems(data)
         setActive(!isActive);
-    
+        setFoodTitle("All")
     }
 
     const filterBreakfast=()=>{
         let newItems= data.filter((item)=> item.category === 'breakfast');
         setItems(newItems)
         setActive(!isActive);
+        setFoodTitle("Breakfast")
+        
 
     }
 
@@ -21,11 +24,13 @@ const NavBar = ({data, setItems}) => {
         let newItems= data.filter((item)=> item.category === 'lunch');
         setItems(newItems) 
         setActive(!isActive);
+        setFoodTitle("Lunch")
     }
     const filterShakes=()=>{
         let newItems= data.filter((item)=> item.category === 'shakes');
         setItems(newItems)
-        setActive(!isActive); 
+        setActive(!isActive);
+        setFoodTitle("Shakes") 
     }
 
 
@@ -43,6 +48,7 @@ const NavBar = ({data, setItems}) => {
                         <i class="fa fa-minus"></i>
                     </div>
                 </div>
+                <h2 className="foodTitle">{foodTitle}</h2>
             </div>
             <div  className={isActive ? "NavBar-mobileShow" : "NavBar-mobileHide"} >
                 <span class="material-icons" onClick={handleToggle}>close</span>

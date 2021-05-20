@@ -203,7 +203,7 @@ body{
   .fa-minus{/* Short line under the title */
     transform: scale(7, 1.5);
     color:rgb(179, 124, 53);
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   
   .material-icons{  /* Mobile view Exit Button */
@@ -220,6 +220,19 @@ body{
   @keyframes exit {
     100%{transform: rotate(90deg);}
   }
+
+
+  
+  .foodTitle{
+    width: 80%;
+    margin: auto;
+    color:rgb(179, 124, 53);
+    margin-bottom: 5px;
+  }
+
+
+
+
 
   /* Navigation Sectiion */
   .Navigation-container{
@@ -282,7 +295,7 @@ body{
     gap: 0% 4%;
     justify-items: center;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 150px;
     grid-template-columns: 1fr 1fr;
   }
   
@@ -296,7 +309,7 @@ body{
     grid-template-columns: 0px 0fr;
     transition: all 0.5s ease-in;
     cursor: pointer;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
    
   }
   .food{
@@ -395,6 +408,13 @@ body{
     100%{transform: rotate(90deg);}
   }
 
+  .foodTitle{
+    width: 80%;
+    margin: auto;
+    color:rgb(179, 124, 53);
+    margin-bottom: 5px;
+  }
+
 
 
 
@@ -413,7 +433,7 @@ body{
   .fa-minus{/* Short line under the title */
     transform: scale(7, 1.5);
     color:rgb(179, 124, 53);
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
   
  
@@ -479,7 +499,7 @@ body{
     gap: 0% 4%;
     justify-items: center;
     margin: auto;
-    margin-top: 90px;
+    margin-top: 118px;
     grid-template-columns: 0fr 0fr;
   }
   
@@ -493,7 +513,7 @@ body{
     grid-template-columns: 0px 0fr;
     transition: all 0.5s ease-in;
     cursor: pointer;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
    
   }
   .food{
