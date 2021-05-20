@@ -1,0 +1,555 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background-color: rgb(230, 235, 235);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.App{
+  width: 80%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+/* Page Title section */
+.title{
+  text-align: center;
+}
+.title h1{
+  font-size: 45px;
+  color: black;
+}
+.fa-minus{/* Short line under the title */
+  transform: scale(7, 1.5);
+  color:rgb(179, 124, 53);
+}
+
+
+
+/* Navigation Section */
+.NavButtons{
+  text-align: center;
+}
+
+.NavButtons button{
+  background-color: transparent;
+  border: none;
+  color:rgb(179, 124, 53) ;
+  margin: 20px;
+  padding: 10px;
+  font-size: 18px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.NavButtons button:focus{
+  border-bottom: 1px solid rgb(179, 124, 53);
+}
+
+.NavButtons button:hover{
+  background-color: rgb(179, 124, 53);
+  color: white;
+  border-radius: 5px;
+  transition:all 0.3s ease-in;
+}
+
+
+.Mobile{/* Mobile navigation template */
+  display: none;
+}
+.material-icons{  /* Mobile-view Exit Button */
+  display: none;
+}
+
+
+
+
+
+/* The main Manu body */
+
+.Main-container{
+  width: 100%;
+  display: grid;
+  gap: 0% 4%;
+  justify-items: center;
+  margin: auto;
+  margin-top: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+
+.menu-item{
+  display: grid;
+  width: 100%;
+  gap: 5%;
+  grid-template-columns: 230px 1fr;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+.food{
+  width: 100%;
+  height: 160px;
+  border: 5px solid rgb(179, 124, 53) ;
+  border-radius: 5px;
+}
+.menu-item:hover{
+  transition: all 0.5s ease-out;
+  transform: scale(1.1);
+  box-shadow: 1px 1px 15px silver;
+  border-radius: 5px;
+}
+
+.item-info{
+  margin: 10px 10px 0px 0px;
+}
+.item-info header{
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 1.5px;
+}
+
+.item-text{
+  margin-top: 5px;
+  color: rgb(85, 91, 102);
+  line-height: 25px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet View */
+
+
+@media (max-width:1023px){
+  .App{
+    width: 100%;
+    margin: auto;
+    margin-top: 0px;
+  }
+
+  /* Mobile  Nav Bar section and Toggle  button */
+  .Mobile{
+    display: block;
+    width: 100%;
+    position: fixed;
+    background-color:rgb(230, 235, 235) ;
+    z-index: 10;
+  }
+  .MobileNav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+  }
+  .fa-align-left{ /*Toggle Button*/
+    font-size: 40px;
+    color:rgb(179, 124, 53);
+    margin-top: 20px;
+  }
+  .mobileTitle{
+    text-align: center;
+  }
+  .mobileTitle h1{
+    color: black;
+    font-size: 50px;
+  }
+
+  
+
+
+
+
+  /* After NavBar Toggle Button is clicked */
+  
+  /* Page Title section */
+  .title{
+    text-align: center;
+  }
+  .title h1{
+    font-size: 50px;
+    color: white;
+    margin: 15px;
+    margin-bottom: 0px;
+  }
+  .fa-minus{/* Short line under the title */
+    transform: scale(7, 1.5);
+    color:rgb(179, 124, 53);
+    margin-bottom: 20px;
+  }
+  
+  .material-icons{  /* Mobile view Exit Button */
+    color: silver;
+    font-size: 50px;
+    display: block;
+    float: right;
+    margin: 20px 10px 0px 0px;
+    animation-name: exit;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes exit {
+    100%{transform: rotate(90deg);}
+  }
+
+  /* Navigation Sectiion */
+  .Navigation-container{
+    overflow-x: hidden;
+  }
+  .NavButtons{
+    text-align: center;
+  }
+  
+  .NavButtons button{
+    display: block;
+    background-color: transparent;
+    border: none;
+    color:rgb(179, 124, 53) ;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 10px;
+    font-size: 25px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+
+
+  .NavBar-mobileHide{/*it set the mobile Nav bar to display none */
+    position: absolute;
+    right: 1000px;
+  }
+  .NavBar-mobileShow{/* it set the mobile Nav bar to display block */
+    position: fixed;
+    right: 0px;
+    background-color:black;
+    width: 100%;
+    transition: all 0.3s ease-out;
+    z-index: 20;
+  }
+  .NavButtons button:focus{
+    border-bottom: 1px solid rgb(179, 124, 53);
+  }
+  
+  .NavButtons button:hover{
+    background-color: rgb(179, 124, 53);
+    color: white;
+    border-radius: 5px;
+    transition:all 0.3s ease-in;
+  }
+  
+
+  
+
+  
+  
+  
+  
+  /* The main Manu body */
+  
+  .Main-container{
+    width: 80%;
+    display: grid;
+    gap: 0% 4%;
+    justify-items: center;
+    margin: auto;
+    margin-top: 120px;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  
+  
+  
+  .menu-item{
+    display:block;
+    width: 100%;
+    gap: 0%;
+    grid-template-columns: 0px 0fr;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    margin-bottom: 40px;
+   
+  }
+  .food{
+    width: 95%;
+    height: 160px;
+    border: 5px solid rgb(179, 124, 53) ;
+    border-radius: 5px;
+  }
+  .menu-item:hover{
+    transition: all 0.5s ease-out;
+    transform: scale(1.1);
+    box-shadow: 1px 1px 15px silver;
+    border-radius: 5px;
+  }
+  
+  .item-info{
+    margin: 10px 10px 0px 10px;
+    padding-bottom: 10px;
+  }
+  .item-info header{
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1.5px;
+  }
+  
+  .item-text{
+    margin-top: 2px;
+    color: rgb(85, 91, 102);
+    line-height: 20px;
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile view */
+
+
+@media (max-width:767px){
+  .App{
+    width: 100%;
+    margin: auto;
+    margin-top: 0px;
+  }
+
+  /* Mobile  Nav Bar section and Toggle  button */
+  .Mobile{
+    display: block;
+    width: 100%;
+    position: fixed;
+    background-color:rgb(230, 235, 235) ;
+    z-index: 10;
+  }
+  .MobileNav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+  }
+  .fa-align-left{ /*Toggle Button*/
+    font-size: 30px;
+    color:rgb(179, 124, 53);
+    margin-top: 10px;
+  }
+  .mobileTitle{
+    text-align: center;
+  }
+  .mobileTitle h1{
+    color: black;
+    font-size: 30px;
+  }
+
+  .material-icons{  /* Mobile view Exit Button */
+    color: silver;
+    font-size: 40px;
+    display: block;
+    float: right;
+    margin: 10px 10px 0px 0px;
+    animation-name: exit;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes exit {
+    100%{transform: rotate(90deg);}
+  }
+
+
+
+
+  /* After NavBar Toggle Button is clicked */
+  
+  /* Page Title section */
+  .title{
+    text-align: center;
+  }
+  .title h1{
+    font-size: 40px;
+    color: white;
+    margin: 15px;
+    margin-bottom: 0px;
+  }
+  .fa-minus{/* Short line under the title */
+    transform: scale(7, 1.5);
+    color:rgb(179, 124, 53);
+    margin-bottom: 10px;
+  }
+  
+ 
+
+  /* Navigation Sectiion */
+  .Navigation-container{
+    overflow-x: hidden;
+  }
+  .NavButtons{
+    text-align: center;
+  }
+  
+  .NavButtons button{
+    display: block;
+    background-color: transparent;
+    border: none;
+    color:rgb(179, 124, 53) ;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+
+
+  .NavBar-mobileHide{/*it set the mobile Nav bar to display none */
+    position: absolute;
+    right: 500px;
+  }
+  .NavBar-mobileShow{/* it set the mobile Nav bar to display block */
+    position: fixed;
+    right: 0px;
+    background-color:black;
+    width: 100%;
+    transition: all 0.3s ease-out;
+    z-index: 20;
+  }
+  .NavButtons button:focus{
+    border-bottom: 1px solid rgb(179, 124, 53);
+  }
+  
+  .NavButtons button:hover{
+    background-color: rgb(179, 124, 53);
+    color: white;
+    border-radius: 5px;
+    transition:all 0.3s ease-in;
+  }
+  
+
+  
+
+  
+  
+  
+  
+  /* The main Manu body */
+  
+  .Main-container{
+    width: 80%;
+    display: block;
+    gap: 0% 4%;
+    justify-items: center;
+    margin: auto;
+    margin-top: 90px;
+    grid-template-columns: 0fr 0fr;
+  }
+  
+  
+  
+  
+  .menu-item{
+    display:block;
+    width: 100%;
+    gap: 0%;
+    grid-template-columns: 0px 0fr;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    margin-bottom: 30px;
+   
+  }
+  .food{
+    width: 95%;
+    height: 160px;
+    border: 5px solid rgb(179, 124, 53) ;
+    border-radius: 5px;
+  }
+  .menu-item:hover{
+    transition: all 0.5s ease-out;
+    transform: scale(1.1);
+    box-shadow: 1px 1px 15px silver;
+    border-radius: 5px;
+  }
+  
+  .item-info{
+    margin: 10px 10px 0px 10px;
+    padding-bottom: 10px;
+  }
+  .item-info header{
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1.5px;
+  }
+  
+  .item-text{
+    margin-top: 2px;
+    color: rgb(85, 91, 102);
+    line-height: 20px;
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
